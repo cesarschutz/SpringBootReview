@@ -1,5 +1,6 @@
 package com.example.demo.services.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -29,6 +30,11 @@ public class EmpresaServiceImpl implements EmpresaService {
 	public Empresa persistir(Empresa empresa) {
 		log.info("Persistindo empresa: {}", empresa);
 		return this.empresaRepository.save(empresa);
+	}
+	
+	@Override
+	public List<Empresa> buscar() {
+		return empresaRepository.findAll();
 	}
 
 }

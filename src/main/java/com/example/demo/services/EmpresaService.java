@@ -1,5 +1,6 @@
 package com.example.demo.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.example.demo.entities.Empresa;
@@ -21,5 +22,7 @@ public interface EmpresaService {
 	 * @return Empresa
 	 */
 	Empresa persistir(Empresa empresa);
+
+	List<Empresa> buscar();
 	
 }
